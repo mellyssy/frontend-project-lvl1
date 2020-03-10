@@ -1,4 +1,4 @@
-name: Setup and run linter
+name: Setup and run
 on: [push]
 
 jobs:
