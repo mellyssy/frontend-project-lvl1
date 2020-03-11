@@ -1,9 +1,27 @@
-import readlineSync from 'readline-sync';
+import { hello, getAnswer } from './cli.js';
 
-const hello = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+const gameRun = (game, rules) => {
+  const name = hello();
+
+  console.log(rules);
+  let score = 0;
+
+  while (score < 3) {
+    const { question, correct } = game();
+    console.log(`Question: ${question}`);
+    const answer = getAnswer();
+
+    if (correct === answer) {
+      score += 1;
+    } else {
+      console.log(
+        `"${answer}" is wrong answer ;(. Correct answer was "${correct}".\nLet's try again, ${name}!`,
+      );
+      return;
+    }
+  }
+
+  console.log(`Congratulations, ${name}!`);
 };
 
-export default hello;
+export default gameRun;
