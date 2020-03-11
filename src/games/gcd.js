@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
-const rules = 'Find the greatest common divisor of given numbers.';
+import getRandomInt from '../util.js';
 
-const getRandomInt = () => Math.floor(Math.random() * 100);
+const rules = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (a, b) => {
   if (a === b) {
@@ -27,11 +27,11 @@ const gcd = () => {
   const a = getRandomInt();
   const b = getRandomInt();
 
-  const expression = `${a} ${b}`;
+  const question = `${a} ${b}`;
 
-  const answer = findGcd(a, b).toString();
+  const correct = findGcd(a, b).toString();
 
-  return { question: expression, correct: answer };
+  return { question, correct };
 };
 
 export { gcd, rules };

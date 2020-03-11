@@ -1,10 +1,12 @@
-const rules = 'What number is missing in the progression?';
+import getRandomInt from '../util.js';
 
-const getRandomInt = (multi) => Math.floor(Math.random() * multi);
+const maxStep = 20;
+const arrLength = 10;
+const rules = 'What number is missing in the progression?';
 
 const generateProgression = (start, step) => {
   const res = [start];
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < arrLength; i += 1) {
     res.push(res[i - 1] + step);
   }
 
@@ -12,17 +14,17 @@ const generateProgression = (start, step) => {
 };
 
 const progression = () => {
-  const start = getRandomInt(100);
-  const step = getRandomInt(20);
-  const index = getRandomInt(10);
+  const start = getRandomInt();
+  const step = getRandomInt(maxStep);
+  const index = getRandomInt(arrLength);
 
   const arr = generateProgression(start, step);
-  const answer = arr[index].toString();
+  const correct = arr[index].toString();
   arr[index] = '...';
 
-  const expression = arr.join(' ');
+  const question = arr.join(' ');
 
-  return { question: expression, correct: answer };
+  return { question, correct };
 };
 
 export { progression, rules };

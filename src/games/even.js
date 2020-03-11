@@ -1,16 +1,16 @@
+import getRandomInt from '../util.js';
+
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getRandomInt = () => Math.floor(Math.random() * 100);
-
 const even = () => {
-  const num = getRandomInt();
-  let answer = 'no';
+  const question = getRandomInt();
+  let correct = 'no';
 
-  if (num % 2 === 0) {
-    answer = 'yes';
+  if (question % 2 === 0) {
+    correct = 'yes';
   }
 
-  return { question: num, correct: answer };
+  return { question, correct };
 };
 
 export { even, rules };
