@@ -6,3 +6,29 @@
 
 
 Brain Games. Level 1 project on [Hexlet](https://ru.hexlet.io/professions/python/projects/49), program: Frontend developer. 
+
+---
+
+### Installation and first run:
+
+[![asciicast](https://asciinema.org/a/pX2OpzDE7jJU2x6BrS0AOOvfH.svg)](https://asciinema.org/a/pX2OpzDE7jJU2x6BrS0AOOvfH)
+
+### Check if the number is even:
+
+[![asciicast](https://asciinema.org/a/xBkQRpE6rqi0kpy0tLwbFUKdo.svg)](https://asciinema.org/a/xBkQRpE6rqi0kpy0tLwbFUKdo)
+
+### Calculate the result of expression:
+
+[![asciicast](https://asciinema.org/a/UG6UlAdejIf6SNo6Far9lCSut.svg)](https://asciinema.org/a/UG6UlAdejIf6SNo6Far9lCSut)
+
+### Find greatest common divisor:
+
+[![asciicast](https://asciinema.org/a/12BfNlAEodWrBA6dVNWgWS2kl.svg)](https://asciinema.org/a/12BfNlAEodWrBA6dVNWgWS2kl)
+
+### Find a missing number in progression:
+
+[![asciicast](https://asciinema.org/a/8oVqsd8Y7pBPFTQyF0VAag3fm.svg)](https://asciinema.org/a/8oVqsd8Y7pBPFTQyF0VAag3fm)
+
+### Check if the number is prime:
+
+[![asciicast](https://asciinema.org/a/6tBTSvC82Fa6tRLGvlsaZ2IsV.svg)](https://asciinema.org/a/6tBTSvC82Fa6tRLGvlsaZ2IsV)
