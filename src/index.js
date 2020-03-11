@@ -13,6 +13,7 @@ const gameRun = (game, rules) => {
 
     if (correct === answer) {
       score += 1;
+      console.log('Correct!');
     } else {
       console.log(
         `"${answer}" is wrong answer ;(. Correct answer was "${correct}".\nLet's try again, ${name}!`,
