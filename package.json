@@ -11,14 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/mellyssy/frontend-project-lvl1.git"
   },
-  "author": "",
+  "keywords": ["javascript", "game", "cli"],
+  "author": "mellyssy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mellyssy/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/mellyssy/frontend-project-lvl1#readme",
   "bin": {
-    "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",

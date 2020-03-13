@@ -7,6 +7,24 @@
 
 Brain Games. Level 1 project on [Hexlet](https://ru.hexlet.io/professions/python/projects/49), program: Frontend developer. 
 
+
+Installation:
+
+```
+make publish
+npm link
+```
+
+Available commands:
+
+```
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
+
 ---
 
 ### Installation and first run:
