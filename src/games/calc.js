@@ -1,4 +1,5 @@
 import getRandomInt from '../util.js';
+import runGame from '../index.js';
 
 const maxOperators = 3;
 const rules = 'What is the result of the expression?';
@@ -22,4 +23,6 @@ const calc = () => {
   return { question, correct };
 };
 
-export { calc, rules };
+const runCalc = () => runGame(calc, rules);
+
+export default runCalc;

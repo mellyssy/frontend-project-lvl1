@@ -1,4 +1,5 @@
 import getRandomInt from '../util.js';
+import runGame from '../index.js';
 
 const maxStep = 20;
 const arrLength = 10;
@@ -27,4 +28,6 @@ const progression = () => {
   return { question, correct };
 };
 
-export { progression, rules };
+const runProgression = () => runGame(progression, rules);
+
+export default runProgression;
