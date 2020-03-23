@@ -1,7 +1,7 @@
 import getRandomInt from '../util.js';
 import runGame from '../index.js';
 
-const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (n) => {
   if (n % 2 === 0) {
@@ -11,12 +11,10 @@ const isEven = (n) => {
   return false;
 };
 
-const even = () => {
+const runEven = () => {
   const question = getRandomInt();
   const correct = isEven(question) ? 'yes' : 'no';
   return { question, correct };
 };
 
-const runEven = () => runGame(even, rules);
-
-export default runEven;
+export default () => runGame(runEven, description);

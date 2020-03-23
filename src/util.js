@@ -1,3 +1,1 @@
-const max = 100;
-
-export default (multi = max) => Math.floor(Math.random() * multi);
+export default (min = 0, max = 100) => min + Math.floor(Math.random() * (max - min));

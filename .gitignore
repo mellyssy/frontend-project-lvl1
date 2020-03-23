@@ -1,6 +1,5 @@
 /node_modules/
 *.log
-dist
 coverage
 .vscode
 .DS_Store

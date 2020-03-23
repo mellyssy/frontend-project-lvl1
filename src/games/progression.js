@@ -3,7 +3,7 @@ import runGame from '../index.js';
 
 const maxStep = 20;
 const arrLength = 10;
-const rules = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const generateProgression = (start, step) => {
   const res = [start];
@@ -28,6 +28,6 @@ const progression = () => {
   return { question, correct };
 };
 
-const runProgression = () => runGame(progression, rules);
+const runProgression = () => runGame(progression, description);
 
 export default runProgression;
