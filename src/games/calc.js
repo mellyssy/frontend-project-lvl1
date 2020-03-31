@@ -1,24 +1,39 @@
 import getRandomInt from '../util.js';
 import runGame from '../index.js';
 
-const maxOperators = 3;
 const description = 'What is the result of the expression?';
+const min = 0;
+const max = 100;
 
-const add = (a, b) => a + b;
-const subtract = (a, b) => a - b;
-const multiply = (a, b) => a * b;
+const calculate = (a, b, operator) => {
+  let answer = 0;
+  switch (operator) {
+    case '+':
+      answer = a + b;
+      break;
+    case '-':
+      answer = a - b;
+      break;
+    case '*':
+      answer = a * b;
+      break;
+    default:
+      break;
+  }
+  return answer;
+};
 
-const operators = [['+', add], ['-', subtract], ['*', multiply]];
+const operators = ['+', '-', '*'];
 
 const calc = () => {
-  const a = getRandomInt();
-  const b = getRandomInt();
+  const a = getRandomInt(min, max);
+  const b = getRandomInt(min, max);
 
-  const [operator, operation] = operators[getRandomInt(maxOperators)];
+  const operator = operators[getRandomInt(min, (operators.length - 1))];
 
   const question = `${a} ${operator} ${b}`;
 
-  const correct = operation(a, b).toString();
+  const correct = calculate(a, b, operator).toString();
 
   return { question, correct };
 };

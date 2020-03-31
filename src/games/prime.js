@@ -2,12 +2,10 @@ import getRandomInt from '../util.js';
 import runGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const min = 0;
+const max = 100;
 
 const isPrime = (n) => {
-  if (n < 4) {
-    return true;
-  }
-
   for (let i = 2; i <= Math.floor(n / 2); i += 1) {
     if (n % i === 0) {
       return false;
@@ -18,7 +16,7 @@ const isPrime = (n) => {
 };
 
 const prime = () => {
-  const question = getRandomInt();
+  const question = getRandomInt(min, max);
 
   const correct = isPrime(question) ? 'yes' : 'no';
 

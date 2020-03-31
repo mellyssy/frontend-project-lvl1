@@ -2,21 +2,18 @@ import readlineSync from 'readline-sync';
 
 const maxScore = 3;
 
-const runGame = (game, rules) => {
+const runGame = (play, description) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log(rules);
+  console.log(description);
 
-  let score = 0;
-
-  while (score < maxScore) {
-    const { question, correct } = game();
+  for (let score = 0; score < maxScore; score += 1) {
+    const { question, correct } = play();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
     if (correct === answer) {
-      score += 1;
       console.log('Correct!');
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correct}".`);
