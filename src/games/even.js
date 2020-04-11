@@ -9,8 +9,8 @@ const isEven = (n) => n % 2 === 0;
 
 const runEven = () => {
   const question = getRandomInt(min, max);
-  const correct = isEven(question) ? 'yes' : 'no';
-  return { question, correct };
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return { question, correctAnswer };
 };
 
 export default () => runGame(runEven, description);

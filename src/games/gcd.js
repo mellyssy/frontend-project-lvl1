@@ -3,7 +3,7 @@ import getRandomInt from '../util.js';
 import runGame from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
-const min = 0;
+const min = 1;
 const max = 100;
 
 const findGcd = (a, b) => {
@@ -32,9 +32,8 @@ const gcd = () => {
 
   const question = `${a} ${b}`;
 
-  const correct = findGcd(a, b).toString();
-
-  return { question, correct };
+  const correctAnswer = findGcd(a, b).toString();
+  return { question, correctAnswer };
 };
 
 const runGcd = () => runGame(gcd, description);

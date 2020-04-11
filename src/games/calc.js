@@ -6,7 +6,7 @@ const min = 0;
 const max = 100;
 
 const calculate = (a, b, operator) => {
-  let answer = 0;
+  let answer;
   switch (operator) {
     case '+':
       answer = a + b;
@@ -18,7 +18,7 @@ const calculate = (a, b, operator) => {
       answer = a * b;
       break;
     default:
-      break;
+      return false;
   }
   return answer;
 };
@@ -33,9 +33,9 @@ const calc = () => {
 
   const question = `${a} ${operator} ${b}`;
 
-  const correct = calculate(a, b, operator).toString();
+  const correctAnswer = calculate(a, b, operator).toString();
 
-  return { question, correct };
+  return { question, correctAnswer };
 };
 
 const runCalc = () => runGame(calc, description);

@@ -6,6 +6,10 @@ const min = 0;
 const max = 100;
 
 const isPrime = (n) => {
+  if (n < 2) {
+    return false;
+  }
+
   for (let i = 2; i <= Math.floor(n / 2); i += 1) {
     if (n % i === 0) {
       return false;
@@ -18,9 +22,9 @@ const isPrime = (n) => {
 const prime = () => {
   const question = getRandomInt(min, max);
 
-  const correct = isPrime(question) ? 'yes' : 'no';
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return { question, correct };
+  return { question, correctAnswer };
 };
 
 const runPrime = () => runGame(prime, description);
