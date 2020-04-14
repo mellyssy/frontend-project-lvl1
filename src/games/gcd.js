@@ -1,41 +1,45 @@
 /* eslint-disable no-param-reassign */
 import getRandomInt from '../util.js';
-import runGame from '../index.js';
+import playGame from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 const min = 1;
 const max = 100;
 
-const findGcd = (a, b) => {
-  if (a === b) {
-    return a;
+const findGcd = (firstNumber, secondNumber) => {
+  if (firstNumber === secondNumber) {
+    return firstNumber;
   }
 
-  if (a < b) {
-    [a, b] = [b, a];
+  if (firstNumber < secondNumber) {
+    [firstNumber, secondNumber] = [secondNumber, firstNumber];
   }
 
-  let remainder = a % b;
+  if (secondNumber === 0) {
+    return firstNumber;
+  }
+
+  let remainder = firstNumber % secondNumber;
 
   while (remainder) {
-    a = b;
-    b = remainder;
-    remainder = a % b;
+    firstNumber = secondNumber;
+    secondNumber = remainder;
+    remainder = firstNumber % secondNumber;
   }
 
-  return b;
+  return secondNumber;
 };
 
-const gcd = () => {
-  const a = getRandomInt(min, max);
-  const b = getRandomInt(min, max);
+const generateGcdData = () => {
+  const firstNumber = getRandomInt(min, max);
+  const secondNumber = getRandomInt(min, max);
 
-  const question = `${a} ${b}`;
+  const question = `${firstNumber} ${secondNumber}`;
 
-  const correctAnswer = findGcd(a, b).toString();
+  const correctAnswer = findGcd(firstNumber, secondNumber).toString();
   return { question, correctAnswer };
 };
 
-const runGcd = () => runGame(gcd, description);
+const runGcd = () => playGame(generateGcdData, description);
 
 export default runGcd;
