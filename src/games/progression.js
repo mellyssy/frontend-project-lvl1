@@ -21,11 +21,11 @@ const generateProgressionData = () => {
   const step = getRandomInt(min, maxStep);
   const index = getRandomInt(min, (progressionLength - 1));
 
-  const arr = generateProgression(start, step, progressionLength);
-  const correctAnswer = arr[index].toString();
-  arr[index] = '...';
+  const progression = generateProgression(start, step, progressionLength);
+  const correctAnswer = progression[index].toString();
+  progression[index] = '...';
 
-  const question = arr.join(' ');
+  const question = progression.join(' ');
 
   return { question, correctAnswer };
 };
